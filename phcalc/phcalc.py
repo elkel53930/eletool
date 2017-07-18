@@ -26,19 +26,19 @@ print("        +--W--+")
 print("           R2")
 print()
 
-print("Input voltage VCC[V]:")
+print("Input voltage VCC[V]",end=":")
 vcc = float(input())
 #print("VCC is ", vcc, "[V]")
 
-print("Input voltage Vf[V]:")
+print("Input voltage Vf[V]",end=":")
 vf = float(input())
 #print("Vf is ", vf, "[V]")
 
-print("Input current Iph[mA]:")
+print("Input current Iph[mA]",end=":")
 iph = float(input()) / 1000
 #print("Iph is ", iph, "[A]")
 
-print("Input current Ir2[mA]:")
+print("Input current Ir2[mA]",end=":")
 ir2 = float(input()) / 1000
 #print("Ir2 is ", ir2, "[A]")
 
