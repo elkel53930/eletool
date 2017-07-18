@@ -47,9 +47,9 @@ r2 = vf / ir2
 w1 = (vcc-vf) * (iph+ir2) * 1000
 w2 = vf * ir2 * 1000
 
-print("Registance \033[32mR1\033[0m is\033[32m", r1, "[ohm]\033[0m")
-print("   Wattage is\033[32m", w1, "[mW]\033[0m")
+print("Registance \033[32mR1\033[0m is \033[32m{0:.3f}[ohm]\033[0m".format(r1))
+print("   Wattage is \033[32m{0:.3f}[mW]\033[0m".format(w1))
 print("   Recomend\033[32m", chipsize(w1),"\033[0m")
-print("Registance \033[33mR2\033[0m is\033[33m", r2, "[ohm]\033[0m")
-print("   Wattage is\033[33m", w2, "[mW]\033[0m")
+print("Registance \033[33mR2\033[0m is \033[33m{0:.3f}[ohm]\033[0m".format(r2))
+print("   Wattage is \033[33m{0:.3f}[mW]\033[0m".format(w2))
 print("   Recomend\033[33m", chipsize(w2),"\033[0m")
