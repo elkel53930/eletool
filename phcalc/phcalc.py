@@ -43,7 +43,7 @@ ir2 = float(input()) / 1000
 #print("Ir2 is ", ir2, "[A]")
 
 r1 = (vcc-vf) / (iph+ir2)
-r2 = vf / iph
+r2 = vf / ir2
 w1 = (vcc-vf) * (iph+ir2) * 1000
 w2 = vf * ir2 * 1000
 
