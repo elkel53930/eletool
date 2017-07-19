@@ -14,7 +14,7 @@ def chipsize(wat):
     elif wat < 400:
         res = "5025 or larger"
     elif wat < 800:
-        res = "6432 of larger"
+        res = "6432 or larger"
     else:
         res = "large register"
     return res
