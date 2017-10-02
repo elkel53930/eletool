@@ -6,10 +6,10 @@ import System.FilePath.Posix
 
 counting :: [[String]] -> [[String]]
 counting = sortBy (\x y -> head x `compare` head y)
-         . map (\(x,y) -> [unwords $ sort y, x, show $ length y]) -- タプルからリストに戻す
-         . toAscList -- マップからリストに戻す
-         . fromListWith (++) -- 重複が発生したらリファレンスを追加しながらmap化
-         . foldl (\acc (x:xs) -> (head xs,[x]) : acc ) [] -- リストの先頭を取り出してタプルに変換
+         . map (\(val,refs) -> [unwords $ sort refs, val, show $ length refs]) -- タプルからリストに戻す
+         . toAscList -- マップからリストに戻す :: [(Value,[Reference])]
+         . fromListWith (++) -- 重複が発生したらリファレンスを追加しながらmap化 :: Map Value [Reference]
+         . foldl (\acc (x:xs) -> (head xs,[x]) : acc ) [] -- リストの先頭を取り出してタプルに変換 :: [(Value,[Reference])]
 
 addPostfix :: String -> FilePath -> FilePath
 addPostfix p file = takeBaseName file ++ p ++ takeExtension file
